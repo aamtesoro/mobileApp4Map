@@ -3,9 +3,11 @@ package com.example.agamy_pc.meshwar;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
 
@@ -45,8 +47,8 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         try {
             mMap.setMyLocationEnabled(true);
             // mMap.addMarker(new MarkerOptions().title("you are here"));
-            // mMap.setMapType(GoogleMap.MAP_TYPE_SATELLITE);
-            //  mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(-33.86997, 151.2089), 18));
+           // mMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+            mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(-33.86997, 151.2089), 18));
 
 
             //LatLng loc= new LatLng(mMap.getCameraPosition().target.latitude ,mMap.getCameraPosition().target.longitude);
