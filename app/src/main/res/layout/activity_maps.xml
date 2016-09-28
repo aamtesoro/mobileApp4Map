@@ -17,11 +17,13 @@
         android:layout_height="wrap_content">
 
 
+        <!--One  Layout -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentTop="true"
             android:background="#FFF"
+            android:id="@+id/one"
 
             >
 
@@ -41,11 +43,27 @@
         </LinearLayout>
 
 
+        <!--end One -->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:orientation="horizontal"
+            android:layout_alignBottom="@+id/one"
+            android:background="#000"
+
+            >
+
+        </LinearLayout>
+
+        <!-- two layout -->
         <LinearLayout
 
             android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:layout_above="@+id/start_slide"
+            android:layout_above="@+id/three"
+            android:id="@+id/two"
 
             android:background="#FFF">
 
@@ -66,14 +84,29 @@
                 android:src="@drawable/person" />
         </LinearLayout>
 
+        <!-- end two -->
 
         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:orientation="horizontal"
+            android:background="#000"
+            android:layout_alignBottom="@+id/two"
 
-            android:id="@+id/start_slide"
+            >
+
+        </LinearLayout>
+
+
+        <!-- Three Layout -->
+        <LinearLayout
+
             android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:id="@+id/three"
 
-            android:layout_above="@+id/call_ctrl"
+
+            android:layout_above="@+id/four"
             android:background="#FFF">
 
             <TextView
@@ -90,22 +123,42 @@
                 android:layout_marginTop="10dp"
                 android:src="@drawable/slide" />
 
+        </LinearLayout>
+        <!--end three -->
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:orientation="horizontal"
+            android:layout_alignBottom="@+id/three"
+            android:background="#000">
         </LinearLayout>
 
 
+
+
+
+
+
+
+
+        <!--Four Layout -->
         <LinearLayout
 
-            android:id="@+id/call_ctrl"
+            android:id="@+id/four"
             android:layout_width="match_parent"
             android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
             android:background="#FFF">
 
             <RelativeLayout
-                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_marginLeft="20dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp">
+                android:id="@+id/rel3"
+                >
 
                 <ImageView
 
@@ -124,10 +177,23 @@
                     android:textSize="15dp" />
             </RelativeLayout>
 
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="70dp"
+                    android:orientation="vertical"
+                    android:layout_marginRight="20dp"
+                    android:background="#000">
+                </LinearLayout>
+
             <RelativeLayout
-                android:layout_width="wrap_content"
+
+                android:layout_weight="1"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="100dp">
+                android:id="@+id/rel4"
+
+                >
 
                 <ImageView
 
@@ -147,7 +213,10 @@
 
                     />
             </RelativeLayout>
+
+
         </LinearLayout>
+        <!-- end four-->
 
 
     </RelativeLayout>
