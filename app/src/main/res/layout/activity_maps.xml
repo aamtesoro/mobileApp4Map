@@ -13,25 +13,34 @@
 
 
     <RelativeLayout
+
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
 
 
+
         <!--One  Layout -->
         <LinearLayout
+
+
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_alignParentTop="true"
-            android:background="#FFF"
-            android:id="@+id/one"
 
+            android:id="@+id/one"
+            android:orientation="horizontal"
             >
 
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
             <ImageView
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:layout_marginLeft="5dp"
                 android:src="@drawable/redarrow" />
 
             <TextView
@@ -39,7 +48,45 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="City-Stars"
+                android:layout_marginLeft="40dp"
                 android:textSize="25dp" />
+            </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:orientation="vertical"
+            android:layout_marginLeft="140dp"
+            android:background="#000"
+
+            ></LinearLayout>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="5dp"
+
+                >
+                <ImageView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/up"
+                    android:maxWidth="1dp"
+                    android:maxHeight="1dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/uparrow" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/up"
+
+                    android:text="Directions"
+                    android:textSize="15dp" />
+            </RelativeLayout>
         </LinearLayout>
 
 
@@ -57,6 +104,11 @@
 
         </LinearLayout>
 
+
+
+
+
+
         <!-- two layout -->
         <LinearLayout
 
@@ -72,6 +124,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
                 android:text="Mr. Mina"
                 android:textSize="25dp" />
 
@@ -79,7 +132,7 @@
 
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="200dp"
+                android:layout_marginLeft="150dp"
                 android:layout_marginTop="10dp"
                 android:src="@drawable/person" />
         </LinearLayout>
@@ -113,6 +166,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
                 android:text="Start"
                 android:textSize="25dp" />
 
@@ -121,6 +175,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:layout_marginLeft="70dp"
                 android:src="@drawable/slide" />
 
         </LinearLayout>
@@ -135,13 +190,6 @@
         </LinearLayout>
 
 
-
-
-
-
-
-
-
         <!--Four Layout -->
         <LinearLayout
 
@@ -151,6 +199,46 @@
             android:layout_centerHorizontal="true"
             android:layout_alignParentBottom="true"
             android:background="#FFF">
+
+            <RelativeLayout
+
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/rel4"
+                android:layout_marginLeft="20dp"
+
+
+                >
+
+                <ImageView
+
+                    android:id="@+id/img_ans"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:src="@drawable/ans" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/img_ans"
+                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:text="Call the customer"
+                    android:textSize="15dp"
+
+                    />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="1dp"
+                android:layout_height="70dp"
+                android:orientation="vertical"
+                android:layout_marginRight="20dp"
+                android:background="#000">
+            </LinearLayout>
 
             <RelativeLayout
                 android:layout_weight="1"
@@ -166,54 +254,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
                     android:src="@drawable/cancel" />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/img_cancel"
-                    android:layout_marginTop="10dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="5dp"
                     android:text="Cancel the ride"
                     android:textSize="15dp" />
             </RelativeLayout>
-
-
-                <LinearLayout
-                    android:layout_width="1dp"
-                    android:layout_height="70dp"
-                    android:orientation="vertical"
-                    android:layout_marginRight="20dp"
-                    android:background="#000">
-                </LinearLayout>
-
-            <RelativeLayout
-
-                android:layout_weight="1"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:id="@+id/rel4"
-
-                >
-
-                <ImageView
-
-                    android:id="@+id/img_ans"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:src="@drawable/ans" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/img_ans"
-                    android:layout_marginTop="10dp"
-                    android:text="Call the customer"
-                    android:textSize="15dp"
-
-                    />
-            </RelativeLayout>
-
 
         </LinearLayout>
         <!-- end four-->
